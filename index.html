@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ssal-Top | Rice to the Top</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#C9A0DC;
+      --secondary:#EBD8F2;
+      --accent:#F7E7F6;
+      --deep:#4B306A;
+      --muted:#6B4E82;
+      --radius:14px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:"Nunito Sans",sans-serif;background:var(--accent);color:var(--deep);line-height:1.5;}
+    a{text-decoration:none;color:inherit;}
+    
+    /* Top menu */
+    nav{
+      position:sticky;top:0;z-index:1000;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px 24px;
+      box-shadow:0 4px 12px rgba(75,48,106,0.1);
+    }
+    nav .logo{font-family:"Playfair Display",serif;font-size:24px;font-weight:700;color:white;}
+    nav ul{list-style:none;display:flex;gap:18px;}
+    nav ul li a{color:white;font-weight:600;transition:0.3s;}
+    nav ul li a:hover{color:#fff8fb;text-shadow:0 2px 8px rgba(255,255,255,0.3);}
+
+    /* Hero */
+    .hero{
+      background:linear-gradient(180deg,var(--secondary),var(--accent));
+      min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+      text-align:center;padding:20px;
+    }
+    .hero .motto{font-family:"Playfair Display",serif;font-size:28px;margin-top:12px;color:var(--deep);}
+    .hero p{max-width:600px;margin-top:16px;color:var(--muted);}
+    .hero .btn{margin-top:20px;padding:12px 20px;border-radius:12px;font-weight:600;background:var(--primary);color:white;transition:0.3s;box-shadow:0 6px 18px rgba(201,160,220,0.3);}
+    .hero .btn:hover{box-shadow:0 8px 24px rgba(201,160,220,0.5);transform:translateY(-2px);}
+
+    /* About section */
+    section{padding:60px 24px;text-align:center;}
+    section h2{font-family:"Playfair Display",serif;font-size:24px;color:var(--deep);margin-bottom:16px;}
+    section p{max-width:700px;margin:0 auto;color:var(--muted);line-height:1.6;}
+
+    /* Footer */
+    footer{background:var(--primary);color:white;padding:20px;text-align:center;font-size:14px;margin-top:40px;}
+    footer a{color:white;font-weight:600;}
+  </style>
+</head>
+<body>
+
+  <!-- Top menu -->
+  <nav>
+    <div class="logo">Ssal-Top 🌾</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="flashcards.html">Flashcards</a></li>
+      <li><a href="ebook.html">Ebook</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Rice to the Top</h1>
+    <p>Learn Korean with bite-sized flashcards, cultural facts, and quick lessons designed to fit your busy life. Start your journey today!</p>
+    <a class="btn" href="flashcards.html">See Flashcards</a>
+  </div>
+
+  <!-- About Section -->
+  <section>
+    <h2>About Ssal-Top</h2>
+    <p>Ssal-Top is a friendly Korean learning hub created to make learning Korean easy, fun, and consistent. Our flashcards, cultural insights, and ebook guides will help you rise—Rice to the Top! 🌾</p>
+  </section>
+
+  <footer>
+    © 2025 Ssal-Top • Rice to the Top • <a href="https://instagram.com/ssaltopofficial" target="_blank">Instagram</a> | <a href="https://facebook.com/ssaltop" target="_blank">Facebook</a>
+  </footer>
+
+</body>
+</html>
