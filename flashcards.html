@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ssal-Top | Flashcards</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#C9A0DC;
+      --secondary:#EBD8F2;
+      --accent:#F7E7F6;
+      --deep:#4B306A;
+      --muted:#6B4E82;
+      --radius:12px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:"Nunito Sans",sans-serif;background:var(--accent);color:var(--deep);}
+    a{text-decoration:none;color:inherit;}
+
+    /* Top menu */
+    nav{
+      position:sticky;top:0;z-index:1000;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px 24px;
+      box-shadow:0 4px 12px rgba(75,48,106,0.1);
+    }
+    nav .logo{font-family:"Playfair Display",serif;font-size:24px;font-weight:700;color:white;}
+    nav ul{list-style:none;display:flex;gap:18px;}
+    nav ul li a{color:white;font-weight:600;transition:0.3s;}
+    nav ul li a:hover{color:#fff8fb;text-shadow:0 2px 8px rgba(255,255,255,0.3);}
+
+    /* Page Header */
+    .page-header{padding:60px 24px;text-align:center;background:var(--secondary);}
+    .page-header h1{font-family:"Playfair Display",serif;font-size:32px;color:var(--deep);margin-bottom:12px;}
+    .page-header p{color:var(--muted);font-size:16px;}
+
+    /* Flashcards grid */
+    .flashcards-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:24px;
+      padding:40px 24px;
+      justify-items:center;
+    }
+    .card{
+      width:180px;
+      height:220px;
+      perspective:1000px;
+    }
+    .card-inner{
+      position:relative;
+      width:100%;
+      height:100%;
+      text-align:center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor:pointer;
+    }
+    .card:hover .card-inner{transform:rotateY(180deg);}
+    .card-front, .card-back{
+      position:absolute;
+      width:100%;
+      height:100%;
+      backface-visibility:hidden;
+      border-radius:var(--radius);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:600;
+      font-size:18px;
+      padding:12px;
+      box-shadow:0 6px 18px rgba(201,160,220,0.3);
+    }
+    .card-front{background:var(--primary);color:white;}
+    .card-back{background:var(--secondary);color:var(--deep);transform:rotateY(180deg);}
+
+    /* Footer */
+    footer{background:var(--primary);color:white;padding:20px;text-align:center;font-size:14px;margin-top:40px;}
+    footer a{color:white;font-weight:600;}
+  </style>
+</head>
+<body>
+
+  <!-- Top menu -->
+  <nav>
+    <div class="logo">Ssal-Top 🌾</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="flashcards.html">Flashcards</a></li>
+      <li><a href="ebook.html">Ebook</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Flashcards</h1>
+    <p>Hover each card to see the meaning. Learn Korean the fun way!</p>
+  </div>
+
+  <!-- Flashcards Grid -->
+  <div class="flashcards-container">
+    <div class="card"><div class="card-inner"><div class="card-front">안녕하세요</div><div class="card-back">Hello</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">사랑</div><div class="card-back">Love</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">감사합니다</div><div class="card-back">Thank you</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">죄송합니다</div><div class="card-back">Sorry</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">물</div><div class="card-back">Water</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">밥</div><div class="card-back">Rice / Meal</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">친구</div><div class="card-back">Friend</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">학교</div><div class="card-back">School</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">책</div><div class="card-back">Book</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">행복</div><div class="card-back">Happiness</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">음악</div><div class="card-back">Music</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">영화</div><div class="card-back">Movie</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">집</div><div class="card-back">House / Home</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">가족</div><div class="card-back">Family</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">하늘</div><div class="card-back">Sky</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">바다</div><div class="card-back">Sea</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">봄</div><div class="card-back">Spring</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">여름</div><div class="card-back">Summer</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">겨울</div><div class="card-back">Winter</div></div></div>
+    <div class="card"><div class="card-inner"><div class="card-front">친절</div><div class="card-back">Kindness</div></div></div>
+  </div>
+
+  <footer>
+    © 2025 Ssal-Top • Rice to the Top • <a href="https://discord.gg/YOURDISCORD" target="_blank">Discord</a> | <a href="https://wa.me/YOURNUMBER" target="_blank">WhatsApp</a>
+  </footer>
+
+</body>
+  </html>
